@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "b7c3e5c2-7f79-476f-a0c3-f8fab12a8f5c"
+      }
+    },
+    "owner": "seroca",
+    "android": {
+      "package": "com.seroca.apploginfinal"
+    }
+  }
+}

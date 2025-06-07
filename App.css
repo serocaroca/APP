@@ -1,0 +1,81 @@
+/* 📐 Estilo principal del calendario react-datepicker */
+.react-datepicker {
+  font-size: 13px;
+  width: 180px !important; /* mismo ancho que el input */
+  background-color: white !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  z-index: 99999 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  padding: 4px;
+  margin: 0 !important;
+}
+
+/* 🎯 Posicionamiento exacto: arriba del input y alineado */
+.react-datepicker-popper {
+  z-index: 99999 !important;
+  transform: translateY(-100%) !important; /* justo encima del campo */
+  left: 0 !important; /* alineado con borde izquierdo */
+  margin: 0 !important;
+  width: 180px !important;
+}
+
+/* ❌ Oculta la flechita de burbuja */
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* 🧠 Encabezado del mes */
+.react-datepicker__header {
+  background-color: #bbdefb !important;
+  border-bottom: 1px solid #90caf9;
+  padding-top: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* 📅 Día de la semana */
+.react-datepicker__day-name {
+  color: #0d47a1;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* 🔲 Días normales */
+.react-datepicker__day {
+  border-radius: 4px;
+  padding: 4px 6px;
+  text-align: center;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  margin: 2px;
+  transition: background-color 0.2s ease;
+}
+
+/* 🖱️ Hover sobre días */
+.react-datepicker__day:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
+
+/* ✅ Día seleccionado */
+.react-datepicker__day--selected {
+  background-color: #90caf9 !important;
+  color: white !important;
+}
+
+/* ☁️ Día de hoy */
+.react-datepicker__day--today {
+  border: 1px solid #1976d2 !important;
+}
+
+/* ✨ Si deseas igualar también el estilo de los campos de fecha */
+input[type="text"] {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  font-size: 13px;
+  background-color: white;
+}
+
