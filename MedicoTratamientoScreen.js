@@ -127,7 +127,7 @@ export default function MedicoTratamientoScreen({ route, navigation }) {
           setTextoMed([...textoMed, '']);
         }}/>
 
-        <ScrollView style={{marginTop:10}}>
+        <ScrollView style={{marginTop:10, overflow:'visible'}}>
           {tratamientos.map((item, index) => {
             const vecesPorDía =
               item.frecuencia === 'cada 8h' ? 3 :
@@ -307,11 +307,12 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 10, backgroundColor: '#f0f4fa' },
   header: { flexDirection: 'row', justifyContent: 'space-between', padding: 10, backgroundColor: '#cfd8dc', borderRadius: 8 },
   card: { height: 350, backgroundColor: '#fff', borderRadius: 10, padding: 8, marginVertical: 10 },
-  cardMedicacion: { flex: 1, backgroundColor: '#fff', borderRadius: 10, padding: 10 },
+  cardMedicacion: { flex: 1, backgroundColor: '#fff', borderRadius: 10, padding: 10, overflow:'visible' },
   title: { fontWeight: 'bold', fontSize: 16, marginBottom: 8 },
   fila: {
     flexDirection: 'row', alignItems: 'center', marginBottom: 8,
-    flexWrap: 'wrap', gap: 6, position: 'relative', zIndex: 1
+    flexWrap: 'wrap', gap: 6, position: 'relative', zIndex: 1,
+    overflow:'visible'
   },
   colorSelector: {
     position: 'absolute', top: 26, left: 0,
