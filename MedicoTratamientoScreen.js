@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {
-  View, TextInput, TouchableOpacity, Text, ScrollView, Button, StyleSheet, Platform
+  View,
+  TextInput,
+  TouchableOpacity,
+  Text,
+  ScrollView,
+  Button,
+  StyleSheet,
+  Platform,
+  Alert
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import CalendarioMensual from './CalendarioMensual';
@@ -88,7 +96,16 @@ export default function MedicoTratamientoScreen({ route, navigation }) {
     const nuevos = tratamientos.filter(t => !sugerencias.some(s =>
       (s.nombre || '').toLowerCase() === (t.medicamento || '').toLowerCase()));
     await Promise.all(nuevos.map(t => addDoc(collection(db, 'medicamentos'), t)));
-    navigation.replace(origen === 'medico' ? 'PantallaMedico' : 'PantallaSuperusuario', { nick: origen });
+    Alert.alert('¡Datos guardados!', '🐐', [
+      {
+        text: 'OK',
+        onPress: () =>
+          navigation.replace(
+            origen === 'medico' ? 'PantallaMedico' : 'PantallaSuperusuario',
+            { nick: origen }
+          )
+      }
+    ]);
   };
 
   const handleConfirmFecha = (date) => {
